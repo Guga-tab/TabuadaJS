@@ -1,4 +1,3 @@
-## Tabuaba tradicional(multiplicação) feita com JS, estilizada com flex-box.
-<hr>
+## Tabuaba tradicional (multiplicação) feita com JS, estilizada com flex-box.
 
-![image](https://github.com/Guga-tab/TabuadaJS/assets/123379826/01839a35-ce75-42d0-a930-42dc45cc7af8)
+![alt text](image.png)

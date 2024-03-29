@@ -1,19 +1,23 @@
-function calc() {
-   const n1 = document.querySelector('#n1').value;
-   const n2 = document.querySelector('#n2').value;
-   const btn = document.getElementById("submit");
+var result = document.getElementById("result");
+const n1 = document.querySelector('#n1');
+const n2 = document.querySelector('#n2');
+const btn = document.getElementById("submit");
 
-   var result = document.getElementById("result");
+btn.addEventListener('click', () => {
 
-   if (n1 == "" || n2 == "") {
-      result.innerHTML = "Campos vazios!";
-      setTimeout(() => { result.innerHTML = ''; } , 3000);
+result.innerHTML = "Resultado:<br>"
+
+if (n2.value < 0){
+   result.innerHTML = "Somente números positivos";
+   setTimeout(() => { result.innerHTML = ''; } , 3000);
+}else if (n2.value > 10) {
+   result.innerHTML = "Somente números até 10";
+   setTimeout(() => { result.innerHTML = ''; } , 3000);
+}else if (n1.value == "" || n2.value == "") {
+   result.innerHTML = "Campos vazios!";
+   setTimeout(() => { result.innerHTML = ''; } , 3000);
+}else {
+   for (let i = 1; i <= n2.value; i++) {
+      result.innerHTML += n1.value + " x " + i + " = " + n1.value * i + "<br>";
    }
-
-   else {
-      for (let i = 0; i <= n2; i++) {
-         result.innerHTML += n1 + " x " + i + " = " + n1 * i + "<br>";
-         btn.style.display = 'none';
-      }
-   }
-}
+}});
